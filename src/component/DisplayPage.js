@@ -20,12 +20,15 @@ const DisplayPage = (props) => {
                 <tbody>
 
                     {
-                        productValue != undefined && Array.from({ length: len }, productValue.map((k, index) => (
+                         productValue != undefined && productValue.map((k, index) => (
                             <tr key={index}>
                                 <th scope="row">{index + 1}</th>
                                 <td>{k.email}</td>
                                 <td>{k[index + 1]}</td>
-                            </tr>)))}
+                                <td>{k[index + 2] != undefined ? k[index + 2] : ''}</td>
+                                <td>{k[index + 3] != undefined ? k[index + 3] : ''}</td>
+                                <td>{k[index + 4] != undefined ? k[index + 4] : ''}</td>
+                            </tr>))}
                 </tbody>
             </table>
 
